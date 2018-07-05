@@ -1,0 +1,13 @@
+.react-bs-table-container .table-bordered th, .react-bs-table-container .table-bordered td {
+	border: none;
+}
+
+.react-bs-table-tool-bar button:not(:last-child) {
+	margin-right: 3px;
+}
+
+.btn-group .loading{
+	margin-left: 10px;
+	height: 25px;
+	width: 25px;
+}

@@ -1,0 +1,37 @@
+.month-picker {
+    margin-bottom: 0px !important;
+}
+
+.month-picker > .rmp-container .rmp-popup .rmp-pad .rmp-btn {
+    font-size: 0.7em !important;
+}
+
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div label {
+    font-size: 0.9em !important;
+}
+
+/*
+.rmp-popup,
+.rmp-pad {
+    width: 15rem !important;
+}
+*/
+
+.month-picker > .rmp-container .rmp-popup .rmp-pad li,
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div i,
+.month-picker > .rmp-container .rmp-popup .rmp-pad > div label {
+    height: 2.5rem !important;
+    line-height: 2.5rem !important;
+}
+
+.month-picker .clear-zone {
+    cursor: pointer;
+    width: 17px;
+    color: #999;
+    float: right;
+
+    .clear {
+        font-size: 18px;
+        line-height: 1;
+    }
+}

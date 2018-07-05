@@ -1,0 +1,15 @@
+.modal-footer {
+	display: block;
+}
+
+.modal-footer div > :not(:last-child) {
+	margin-right: .4rem;
+}
+
+.modal-footer div {
+	float: right;
+}
+
+.modal-footer p {
+	color: red;
+}

@@ -1,0 +1,190 @@
+.mobile-card {
+  background: #fff;
+  padding: 15px;
+  position: relative;
+  border-radius: 4px;
+  span {
+    display: block;
+  }
+  .header {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 21px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .card-contents {
+    margin-bottom: 13px;
+    .card-content {
+      font-size: 16px;
+    }
+  }
+  .card-actions {
+    padding: 0 30px 0 0;
+    .card-action {
+      font-weight: 500;
+      margin-right: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .card-action:last-child {
+      margin-right: 0;
+    }
+  }
+  .open-extras {
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    right: 15px;
+    bottom: 7px;
+    font-size: 17px;
+    border-radius: 50%;
+    background-color: #fff;
+    span {
+      padding: 5px 7px 7px;
+    }
+  }
+}
+
+.mobile-card-wrapper {
+  padding: 0 15px 15px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  & > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mobile-card-container {
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin-bottom: 15px;
+}
+
+.card-action {
+  cursor: pointer;
+}
+
+.card-extras {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-transition: height 0.5s, padding 0.5s;
+  -moz-transition:  height 0.5s, padding 0.5s;
+  -o-transition:  height 0.5s, padding 0.5s;
+  transition:  height 0.5s, padding 0.5s;
+  background: rgb(224, 237, 253);
+  background: -webkit-linear-gradient(#fff, #f1f7ff);
+  background: -o-linear-gradient(#fff, #f1f7ff);
+  background: -moz-linear-gradient(#fff, #f1f7ff);
+  background: linear-gradient(#fff, #f1f7ff);
+  padding: 15px;
+  position: relative;
+  .card-extra {
+    -webkit-transition: visibility 0.5s, opacity 0.5s;
+    -moz-transition: visibility 0.5s, opacity 0.5s;
+    -o-transition: visibility 0.5s, opacity 0.5s;
+    transition: visibility 0.5s, opacity 0.5s;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    font-size: 16px;
+  }
+}
+
+.card-closed {
+  .card-extras {
+    height: 0;
+    padding: 0 15px;
+    border: none;
+    .card-extra {
+      -webkit-transition: visibility 0s, opacity 0s;
+      -moz-transition: visibility 0s, opacity 0s;
+      -o-transition: visibility 0s, opacity 0s;
+      transition: visibility 0s, opacity 0s;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+.card-open {
+  .mobile-card {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .open-extras {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.mobile-card .card-selected {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  background: $primary;
+  color: #f5f5f5 !important;
+}
+
+.mobile-card.selected {
+  background: rgba(33, 133, 208, 0.08);
+  .card-selected {
+    /*alterar para block, caso for usar icone de selecionado*/
+    display: none;
+  }
+}
+
+.mobile-card .btn-secondary {
+  background-color: transparent;
+  border: 0px;
+  padding: 0.5rem 0.7rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.buttons-mobile-top-cards {
+  border-bottom: 1px solid #cfdbe2;
+  padding: 5px 20px;
+  background: #fff;
+  margin: -20px -20px 1rem;
+
+  button, a {
+    margin-right: 5px;
+  }
+}
+
+
+
+.card-button {
+  width: 42px;
+}
+
+.card-link:hover, .card-link:focus {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.mobile-card-container a:hover, .mobile-card-container a:active, .mobile-card-container a:focus {
+  text-decoration: none!important;
+}
+
+@media (max-width: 768px) {
+  .react-bs-table-tool-bar {
+    display: none;
+  }
+  .react-bs-table {
+    display: none;
+  }
+}

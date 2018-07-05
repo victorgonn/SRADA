@@ -1,0 +1,40 @@
+.footer {
+	-webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	//position: absolute;
+	background-color: #f5f7fa;
+	bottom: -60px;
+	left: 0;
+	right: 0;
+	height: 60px;
+}
+
+.footer-bottom {
+	height: 60px;
+	width: 100%;
+	background: none repeat scroll 0% 0%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.footer > span {
+	font-size: 14px;
+	color: #656565;
+}
+
+/*mobile mode*/
+@media (max-width: 768px) {
+	.wrapper.minimized-content .footer {
+		left: 0 !important;
+		right: 0 !important;
+	}
+   	.wrapper:not(.minimized-content)  {
+	   	.footer {
+	   		left: 220px !important;
+	   		right: -220px !important;
+	   	}
+   	}
+}

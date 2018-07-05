@@ -1,0 +1,105 @@
+textarea {
+	height: 122px;
+	resize: none;
+}
+
+textarea.textarea-sm {
+	height: 70px;
+}
+
+select {
+	height: 122px;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: .5rem;
+}
+
+.checkbox-title {
+	margin-top: 25px;
+	margin-bottom: 15px;
+	span {
+		font-size: 1.414em;
+		font-weight: 500;
+		line-height: 1.1;
+	}
+}
+
+.form-title {
+	margin-bottom: 10px;
+	h4 {
+		display: inline-block;
+	}
+	a {
+		margin-left: 10px;
+		font-size: 18px;
+	}
+}
+
+
+div.form-subtitle {
+	display: inline-block;
+	background: #fff;
+	span.subtitle {
+		margin-right: 10px;
+		font-size: 14px;
+		font-style: italic;
+	}
+	a {
+		margin-right: 6px;
+		font-size: 15px;
+	}
+	a:last-child {
+		margin-right: 8px;
+		font-size: 15px;
+	}
+}
+
+.form-title-inline {
+	h4 {
+		display: inline-block;
+		margin-right: 15px;
+	}
+	span {
+		font-size: 28px;
+	}
+}
+
+hr.form-subtitle {
+	margin-top: -10px;
+	margin-bottom: 17px;
+}
+
+
+.multiple-selects {
+	width: 100%;
+	position: relative;
+	.multiple-selects-input {
+		margin-right: 50px;
+	}
+	.multiple-selects-buttons {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15px;
+		a {
+			margin-left: 5px;
+		}
+		span {
+			font-size: 15px;
+		}
+	}
+
+	.multiple-selects-input.no-buttons {
+		margin-right: 0;
+	}
+
+	.multiple-selects-buttons.no-buttons {
+		display: none;
+	}
+}
+
+.react-datepicker__input-container > .form-control[readonly] {
+	background-color: #fff;
+}

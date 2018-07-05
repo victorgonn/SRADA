@@ -1,0 +1,59 @@
+.login-container {
+  margin: 50px 0px;
+  text-align: left;
+  & > div {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .login-container > div {
+    width: 100%;
+  }
+}
+
+.panel {
+  padding: 0px 10px;
+
+}
+
+.panel-heading {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(58, 63, 81);
+  border-color: rgb(58, 63, 81);
+  padding: 10px 15px;
+}
+
+.panel-body {
+  padding: 10px 15px;
+  background: rgb(255, 255, 255);
+}
+
+.text-center {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  text-align: center;
+}
+
+.login-form {
+  padding-bottom: 20px;
+}
+
+.login-form input::placeholder, .login-form input::-webkit-input-placeholder, .login-form input:-moz-placeholder{
+  color: rgb(144, 159, 167);
+}
+
+.login-form svg{
+  color: rgb(144, 159, 167);
+}
+
+.InputGroupAddon-white {
+  width: 48px;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+html, body {
+  background-color: #f5f7fa
+}
