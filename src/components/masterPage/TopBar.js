@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Navbar, NavbarBrand } from 'reactstrap';
 import FontAwesome  from "react-fontawesome";
-import loading from '../assets/images/dots-loading.gif';
-
+import loading from '../../assets/images/dots-loading.gif';
+import lscache from "lscache";
 
 @inject("store") @observer
 export default class TopBar extends Component {
@@ -16,6 +16,8 @@ export default class TopBar extends Component {
   quit() {
       //TODO: FAZER LOGOUT
     //window.location.href = '/sgtmot/saml/logout'
+      lscache.remove('token');
+      window.location.href ='/app/'
       console.log("deslogou!");
   }
 
@@ -24,11 +26,10 @@ export default class TopBar extends Component {
       <div className="topbar">
         <Navbar>
           <div className="header-left">
-            <NavbarBrand href="/app/login"><text style={{fontFamily: "open_sansextrabold,Open Sans,Arial,Helvetica,sans-serif", fontWeight: "500", color: "white"}} >IFES Serra</text></NavbarBrand>
+            <NavbarBrand href="/app/login"><text style={{fontFamily: "open_sansextrabold,Open Sans,Arial,Helvetica,sans-serif", fontWeight: "500", color: "white"}} >IFES - SERRA</text></NavbarBrand>
           </div>
           <a onClick={() => this.appStore.toggleSideBar()} className="collapse-sidebar-button"><FontAwesome name="bars" /></a>
           <a onClick={this.quit.bind(this)} title="Sair" className="logout-icon">
-            <FontAwesome name="sign-out" />
               {(!this.loginStore.usuarioLogado) && this.loginStore.loadingUsuarioLogado ? (
                   <div className="topbar-loading">
                       <img src={loading} alt="loading" className="loading"/>
@@ -37,6 +38,7 @@ export default class TopBar extends Component {
                   <span className="navbar-text">{this.loginStore.usuarioLogado.nome}</span>
                   )
               }
+              <FontAwesome name="sign-out" />
           </a>
         </Navbar>
       </div>

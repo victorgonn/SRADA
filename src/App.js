@@ -3,7 +3,6 @@ import {Redirect, Route} from "react-router-dom";
 import { inject, observer } from "mobx-react";
 import {ToastContainer} from "react-toastify";
 import {checkAuth} from "./utils/security"
-import {toast} from "react-toastify";
 import {http} from "./config/Constantes";
 
 @inject("store")
@@ -72,7 +71,6 @@ export default class App extends Component {
 		return (
 			<div>
                 <div>
-                   {/* <Redirect to="/login" />*/}
                     {!checkAuth() && <Redirect to="/login" />}
                     {routesList}
                     <ToastContainer

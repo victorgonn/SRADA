@@ -1,5 +1,6 @@
 import {Login} from "./views/login/Login";
 import {Home} from "./views/home/Home";
+import {Configuracoes} from "./views/configuracoes/Configuracoes";
 
 class Routes {
     constructor() {
@@ -29,7 +30,13 @@ class Routes {
                         "onSideBar": true,
                         "icon": "cog"
                     },
-
+                    {
+                        "label": "Configurações",
+                        "path": "/configuracoes",
+                        "component":  Configuracoes,
+                        "onSideBar": false,
+                        "icon": "cog"
+                    },
 
                 ]
             },

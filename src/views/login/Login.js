@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, FormGroup, Input, InputGroup, InputGroupAddon} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import logo from '../../assets/images/logo.png';
 import { observer, inject } from 'mobx-react';
 import FontAwesome  from "react-fontawesome";
 import { Redirect } from 'react-router-dom'
@@ -25,18 +26,16 @@ export class Login extends React.Component {
         this.usuarioInput.focus();
     }
 
-
-
     render() {
         return (
 			<div>
-               {checkAuth() && <Redirect to="/home" />}
+                {checkAuth() && <Redirect to="/home" />}
 				<div className="login-container">
 					<div className="panel">
 						<div className="panel-heading" style={{backgroundColor:'#17882c'}}>
-                            <text style={{fontFamily: "open_sansextrabold,Open Sans,Arial,Helvetica,sans-serif", fontSize: "2em", lineHeight: ".8em", fontWeight: "500", color: "white"}}>
-                                IFES - Serra
-                            </text>
+							<text style={{fontFamily: "open_sansextrabold,Open Sans,Arial,Helvetica,sans-serif", fontSize: "2em", lineHeight: ".8em", fontWeight: "500", color: "white"}}>
+								IFES - Serra
+							</text>
 						</div>
 						<div className="panel-body">
 							<div className="login-form">
@@ -58,7 +57,7 @@ export class Login extends React.Component {
 										</InputGroup>
 									</FormGroup>
 									<p style={{color: "red"}}>{this.controller.mensagemErro}</p>
-                                    <Button type="submit" color="primary" block disabled={this.controller.logging}>{this.controller.logging ? <img src={loading} alt="loading" className="logging"/> : "Entrar"}</Button>
+									<Button type="submit" color="primary" block disabled={this.controller.logging}>{this.controller.logging ? <img src={loading} alt="loading" className="logging"/> : "Entrar"}</Button>
 								</form>
 							</div>
 						</div>

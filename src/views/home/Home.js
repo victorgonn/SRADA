@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { inject, observer } from "mobx-react";
-import DataWrapper from '../body/DataWrapper';
+import DataWrapper from '../masterPage/DataWrapper';
 
 @inject("store")
 @DataWrapper
@@ -28,7 +28,7 @@ export class Home extends Component {
             <div>
                 <div className="form-wrapper">
                     <div className={this.appStore.width > 768 ? "content-panel" : ""}>
-                        <text>Bem vindo ao IFES</text>
+                        <text>Bem vindo</text>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import SideItem from './SideItem';
 import Separator from './Separador';
 import FontAwesome  from "react-fontawesome"
 import { ListGroup } from 'reactstrap';
+import {Link} from "react-router-dom";
 
 @inject("store") @inject("routes") @observer
 export default class SideBar extends Component {
@@ -51,6 +52,13 @@ export default class SideBar extends Component {
 
         return (
             <div className={this.store.appStore.sidebarFechado ? "side-bar minimized" : "side-bar"}>
+                <div className="sidebar-new-button-container">
+                    <Link to="/configuracoes" className="btn btn-primary sidebar-new-button"
+                          title="Configurações">
+                        <FontAwesome className="sidebar-icon" name="cog"/>
+                        <span className={this.store.appStore.sidebarFechado ? "sidebar-label hidden" : ""}>Configurações</span>
+                    </Link>
+                </div>
                 <ListGroup >
                     {sideItens}
                 </ListGroup>

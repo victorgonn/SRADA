@@ -9,5 +9,6 @@ export const checkAuth = () => {
        //console.log("=====> Vai DESLOGAR!");
        return false;
    }
+
    return true;
 }

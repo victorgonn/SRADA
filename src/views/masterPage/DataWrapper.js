@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
-import TopBar from '../../components/TopBar'
-import SideBar from '../../components/SideBar'
-import Footer from '../../components/Footer'
-import TituloPagina from "../../components/TituloPagina";
+import TopBar from '../../components/masterPage/TopBar'
+import SideBar from '../../components/masterPage/SideBar'
+import Footer from '../../components/masterPage/Footer'
+import TituloPagina from "../../components/masterPage/TituloPagina";
 import {Redirect} from "react-router-dom";
 import {toast} from "react-toastify";
 import {checkAuth} from "../../utils/security";
