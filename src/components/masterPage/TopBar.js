@@ -17,7 +17,7 @@ export default class TopBar extends Component {
       //TODO: FAZER LOGOUT
     //window.location.href = '/sgtmot/saml/logout'
       lscache.remove('token');
-      window.location.href ='/app/'
+      window.location.href ='/'
       console.log("deslogou!");
   }
 
